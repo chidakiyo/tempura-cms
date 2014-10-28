@@ -12,3 +12,5 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
+
+libraryDependencies += "org.apache.velocity" % "velocity" % "1.7"
