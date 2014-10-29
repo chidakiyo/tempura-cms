@@ -19,7 +19,7 @@ object Application extends Controller {
 
     val writer = new StringWriter()
 
-    Velocity.evaluate(context, writer, "", "hello $aaa");
+    Velocity.evaluate(context, writer, "", "hello ${aaa}${bbb}");
 
     val html = """<b>Test no escape</b> <- bold"""
     Ok(views.html.index(writer.toString))
