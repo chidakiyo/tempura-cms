@@ -14,3 +14,5 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies += "org.apache.velocity" % "velocity" % "1.7"
+
+libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
