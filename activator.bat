@@ -9,11 +9,6 @@
 
 @echo off
 
-set "DB_DRIVER=org.h2.Driver"
-set "DATABASE_URL=jdbc:h2:mem:play;MODE=PostgreSQL;DB_CLOSE_DELAY=-1"
-set "DB_USER=sa"
-set "DB_PASS="
-
 set "var1=%~1"
 if defined var1 (
   if "%var1%"=="help" (
