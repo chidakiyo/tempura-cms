@@ -1,5 +1,7 @@
 import play.api._
-import com.typesafe.scalalogging.LazyLogging
+import com.typesafe.scalalogging._
+import play.api.mvc.RequestHeader
+import play.api.mvc.Handler
 
 object Global extends GlobalSettings with LazyLogging {
 
@@ -11,8 +13,9 @@ object Global extends GlobalSettings with LazyLogging {
     logger.info("Application shutdown...")
   }
 
-  override def onRequest(app: Application) {
-    logger.info("######################")
+  override def onRequestReceived(request: RequestHeader): (RequestHeader, Handler) = {
+    logger.debug("Before request --->")
+    super.onRequestReceived(request)
   }
 
 }
