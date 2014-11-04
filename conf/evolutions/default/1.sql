@@ -1,16 +1,15 @@
-# User schema
- 
+# Articles schema
+
 # --- !Ups
- 
-CREATE TABLE User (
-    id bigint(20) NOT NULL AUTO_INCREMENT,
-    email varchar(255) NOT NULL,
-    password varchar(255) NOT NULL,
-    fullname varchar(255) NOT NULL,
-    isAdmin boolean NOT NULL,
+
+CREATE TABLE Article (
+    id bigserial NOT NULL,
+    content text,
+    create_date timestamp without time zone NOT NULL,
+    modify_date timestamp without time zone,
     PRIMARY KEY (id)
 );
- 
+
 # --- !Downs
- 
-DROP TABLE User;
+
+DROP TABLE Article;
