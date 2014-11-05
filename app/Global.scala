@@ -23,7 +23,10 @@ object Global extends GlobalSettings with LazyLogging {
     logger.debug("[ CONFIG ] " + pass)
 
     Class.forName(driver)
-    ConnectionPool.singleton(url, user, pass)
+    (user, pass) match {
+      case user == null && pass == null => ConnectionPool.singleton(url)
+      case _ => ConnectionPool.singleton(url, user, pass)
+    }
 
     // Velocity
     Velocity.init()
