@@ -4,10 +4,9 @@
 
 CREATE TABLE Article (
     id bigserial NOT NULL,
-    content text,
     create_date timestamp without time zone NOT NULL,
     modify_date timestamp without time zone,
-    PRIMARY KEY (id)
+    CONSTRAINT article_pk PRIMARY KEY (id)
 );
 
 # --- !Downs
