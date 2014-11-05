@@ -10,8 +10,6 @@ object Application extends Controller {
 
   def index = Action {
 
-    Velocity.init()
-
     val context = new VelocityContext()
 
     context.put("aaa", "AA_value")
@@ -29,8 +27,12 @@ object Application extends Controller {
       sql"insert into members (name, created_at) values (${name}, current_timestamp)".update.apply()
     }
 
-    val html = """<b>Test no escape</b> <- bold"""
     Ok(views.html.index(writer.toString))
+  }
+
+  def article(id: String) = Action {
+    val html = """<b>Test no escape</b> <- bold"""
+    Ok(views.html.index(html))
   }
 
 }

@@ -5,11 +5,13 @@ import play.api.mvc.Handler
 import play.api.Configuration
 import com.typesafe.config.ConfigFactory
 import scalikejdbc._
+import org.apache.velocity.app.Velocity
 
 object Global extends GlobalSettings with LazyLogging {
 
   override def onStart(app: Application) {
     logger.debug("## onStart")
+
     val config = Configuration(ConfigFactory.load())
     val driver = config.getString("db.default.driver").getOrElse("")
     val url = config.getString("db.default.url").getOrElse("")
@@ -22,6 +24,9 @@ object Global extends GlobalSettings with LazyLogging {
 
     Class.forName(driver)
     ConnectionPool.singleton(url, user, pass)
+
+    // Velocity
+    Velocity.init()
   }
 
   override def beforeStart(app: Application) {
