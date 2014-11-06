@@ -32,10 +32,10 @@ object Global extends GlobalSettings with LazyLogging {
   override def beforeStart(app: Application) {
 
     val config = Configuration(ConfigFactory.load())
-    val driver = config.getString("db.default.driver").getOrElse("")
-    val url = config.getString("db.default.url").getOrElse("")
-    val user = config.getString("db.default.user").getOrElse("")
-    val pass = config.getString("db.default.password").getOrElse("")
+    val driver = config.getString("db.default.driver").getOrElse(null)
+    val url = config.getString("db.default.url").getOrElse(null)
+    val user = config.getString("db.default.user").getOrElse(null)
+    val pass = config.getString("db.default.password").getOrElse(null)
     logger.debug("[ CONFIG ] " + driver)
     logger.debug("[ CONFIG ] " + url)
     logger.debug("[ CONFIG ] " + user)
