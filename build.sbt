@@ -17,13 +17,14 @@ libraryDependencies ++= (Seq(
 	"org.apache.velocity"			%	"velocity"					%	"1.7",
 	"postgresql"					%	"postgresql"				%	"9.1-901-1.jdbc4"
 ) ++ Seq( // scalikeJDBC
-	"org.scalikejdbc"				%%	"scalikejdbc"				%	"2.1.2",
-	"com.h2database"				%	"h2"						%	"1.4.181",
-	"ch.qos.logback"				%	"logback-classic"			%	"1.1.2"
+	"org.scalikejdbc"				%%	"scalikejdbc"				%	"2.1.4",
+	"org.scalikejdbc"				%%	"scalikejdbc-play-plugin"	%	"2.3.3",
+	"org.scalikejdbc"				%%	"scalikejdbc-play-fixture-plugin"	%	"2.3.3", // optional
+	"com.h2database"				%	"h2"						%	"1.4.182",
 ) ++ Seq( // flyway
 	"com.github.tototoshi"			%%	"play-flyway"				%	"1.1.2"
 ) ++ Seq( // scala-logging
 	"com.typesafe.scala-logging"	%%	"scala-logging"				%	"3.1.0",
 	"org.slf4j"						%	"slf4j-api"					%	"1.7.1",
-	"ch.qos.logback"				%	"logback-classic"			%	"1.0.7"
+	"ch.qos.logback"				%	"logback-classic"			%	"1.1.2"
 ))
