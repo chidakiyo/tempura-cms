@@ -20,7 +20,7 @@ libraryDependencies ++= (Seq(
 	"org.scalikejdbc"				%%	"scalikejdbc"				%	"2.1.4",
 	"org.scalikejdbc"				%%	"scalikejdbc-play-plugin"	%	"2.3.3",
 	"org.scalikejdbc"				%%	"scalikejdbc-play-fixture-plugin"	%	"2.3.3", // optional
-	"com.h2database"				%	"h2"						%	"1.4.182",
+	"com.h2database"				%	"h2"						%	"1.4.182"
 ) ++ Seq( // flyway
 	"com.github.tototoshi"			%%	"play-flyway"				%	"1.1.2"
 ) ++ Seq( // scala-logging
