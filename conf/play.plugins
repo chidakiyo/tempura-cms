@@ -1,5 +1,5 @@
 10000:scalikejdbc.PlayPlugin
 
-#10500:com.github.tototoshi.play2.flyway.Plugin
+10500:com.github.tototoshi.play2.flyway.Plugin
 
 11000:scalikejdbc.PlayFixturePlugin
