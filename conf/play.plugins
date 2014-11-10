@@ -1,4 +1,4 @@
-10000:com.github.tototoshi.play2.flyway.Plugin
+1000:com.github.tototoshi.play2.flyway.Plugin
 
 10500:scalikejdbc.PlayPlugin
 
