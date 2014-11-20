@@ -20,12 +20,12 @@ object Application extends Controller {
     Velocity.evaluate(context, writer, "", "hello ${aaa}${bbb}");
 
     // sclikejdbc-test
-    import scalikejdbc._
-    implicit val session = AutoSession
+    //    import scalikejdbc._
+    //    implicit val session = AutoSession
 
-    Seq("Alice", "Bob", "Chris") foreach { name =>
-      sql"insert into members (name, created_at) values (${name}, current_timestamp)".update.apply()
-    }
+    //    Seq("Alice", "Bob", "Chris") foreach { name =>
+    //      sql"insert into members (name, created_at) values (${name}, current_timestamp)".update.apply()
+    //    }
 
     Ok(views.html.index(writer.toString))
   }
