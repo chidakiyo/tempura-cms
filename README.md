@@ -1,4 +1,4 @@
-tempra-cms
+tempura-cms
 ====
 
 ## これはなに？
