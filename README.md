@@ -1,4 +1,4 @@
-tiny-cms
+tempura-cms
 ====
 
 ## これはなに？
