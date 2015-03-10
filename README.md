@@ -12,3 +12,11 @@ tempura-cms
 
 ↓このボタンを押すだけでherokuで動作します。  
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## License
+
+Copyright 2013 - 2015 chidakiyo
+
+Apache License, Version 2.0
+
+http://www.apache.org/licenses/LICENSE-2.0.html
