@@ -15,7 +15,7 @@ tempura-cms
 
 ## License
 
-Copyright 2013 - 2015 chidakiyo
+Copyright 2014 - 2015 chidakiyo
 
 Apache License, Version 2.0
 
